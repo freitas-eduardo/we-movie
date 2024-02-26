@@ -4,3 +4,7 @@ export type Products = {
   price: number;
   image: string;
 };
+
+export type HomeSharedActions = {
+  handleAddProducts: (id: number) => void;
+};

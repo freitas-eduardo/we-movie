@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
 import { Link } from 'react-router-dom'
-import { CartIcon } from '../icons'
+import { CartIcon } from '../icons/cart'
 
 export default function Header() {
   return (
@@ -10,14 +10,13 @@ export default function Header() {
         <span className='logo'>WeMovie</span>
       </Link>
       <S.Aside>
-        <div className='cart'>
+        <Link to="/cart" className='cart'>
           <div className='cart-info'>
             <strong className='cart-title'>Meu Carrinho</strong>
             <span className='cart-value'>1 item</span>
           </div>
           <CartIcon width='32' height='32' />
-        </div>
-
+        </Link>
       </S.Aside>
     </S.HeaderStyled>
   )

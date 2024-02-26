@@ -4,18 +4,21 @@ import { Router } from "./Router";
 import { defaultTheme } from "./styles/themes/default";
 import GlobalStyles from "./styles";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { CartProvider } from "./hooks/useCart";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={defaultTheme}>
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
-        <GlobalStyles />
-      </ThemeProvider>
+      <CartProvider>
+        <ThemeProvider theme={defaultTheme}>
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
+          <GlobalStyles />
+        </ThemeProvider>
+      </CartProvider>
     </QueryClientProvider>
   );
 }

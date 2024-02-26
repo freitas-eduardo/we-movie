@@ -11,9 +11,9 @@ export const HeaderStyled = styled.header`
   height: 64px;
 
   ${({ theme }) => css`
-    padding: calc(${theme.spacings.xsmall} + 3.5px) ${theme.spacings.xsmall};
+   
     max-width: ${theme.grid.container};
-
+    padding: 0 ${theme.spacings.xsmall};
     .logo {
       font-size: ${theme.font.sizes.xlarge};
       font-weight: ${theme.font.bold};
@@ -29,7 +29,8 @@ export const Aside = styled.aside`
     .cart {
       display: flex;
       align-items: center;
-
+      color: ${theme.colors.white};
+      text-decoration:none;
       &-title {
         display: none;
         ${media.greaterThan("medium")`

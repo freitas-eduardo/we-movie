@@ -1,12 +1,21 @@
 import { Route, Routes } from 'react-router-dom'
-import { Home } from './pages/home'
-import Checkout from './pages/checkout'
+import { HomePage } from './pages/home'
+
+import Base from './template/base'
+import CartPage from './pages/cart'
+import CartSucessPage from './pages/cart/cart_success'
 
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/checkout" element={<Checkout />} />
+      <Route element={<Base />}>
+
+        <Route path="/" element={<HomePage />} />
+        <Route path='cart'>
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="success" element={<CartSucessPage />} />
+        </Route>
+      </Route>
     </Routes>
   )
 }

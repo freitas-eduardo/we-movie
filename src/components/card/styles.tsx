@@ -4,8 +4,15 @@ import media from "styled-media-query";
 export const CardStyled = styled.div`
   width: 100%;
   margin: 0 auto;
-  max-width: 343px;
+ 
   display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const CardContent = styled.div`
+  display: flex;
+  width: 100%;
   align-items: center;
   flex-direction: column;
   ${({ theme }) => css`
@@ -13,33 +20,24 @@ export const CardStyled = styled.div`
       calc(${theme.spacings.xxsmall} + 0.2rem);
     background: ${theme.colors.white};
     border-radius: ${theme.border.radius};
-
-
-  `};
-`;
-
-export const CardImage = styled.img`
-  max-width: 147px;
-  height: auto;
-  object-fit: cover;
-`;
-export const CardTitle = styled.strong`
-  ${({ theme }) => css`
-    background: ${theme.font.sizes.xsmall};
-    color: ${theme.colors.greyDark};
-    font-weight: ${theme.font.bold};
-    margin-top: 7px;
-  `};
-`;
-
-export const CardPrice = styled.span`
-  ${({ theme }) => css`
-    background: ${theme.font.sizes.xsmall};
-    color: ${theme.colors.greyDark};
-    font-weight: ${theme.font.bold};
-    margin: 2px 0 8px;
-  `};
-`;
-export const CardFooter = styled.span`
-  width:100%
+    .image {
+      max-width: 147px;
+      height: auto;
+      object-fit: cover;
+    }
+    .title {
+      font-size: ${theme.font.sizes.xsmall};
+      color: ${theme.colors.greyDark};
+      font-weight: ${theme.font.bold};
+      line-height:16.34px ;
+      margin-top: 7px;
+    }
+    .price {
+      font-size: ${theme.font.sizes.large};
+      color: ${theme.colors.greyDark};
+      font-weight: ${theme.font.bold};
+      line-height:16.34px ;
+      margin: 8px 0 ;
+    }
+  `}
 `;

@@ -13,6 +13,5 @@ export const Container = styled.main`
   ${({ theme }) => css`
     max-width: ${theme.grid.container};
     margin: 0 auto;
-    padding: 0 ${theme.spacings.xsmall};
   `}
 `;

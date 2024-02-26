@@ -1,18 +1,15 @@
 import React from 'react'
 import * as S from './styles'
 import Header from '../../components/header'
+import { Outlet } from "react-router-dom";
 
 
-export type BaseTemplateProps = {
-  children: React.ReactNode
-}
-
-export default function Base({ children }: BaseTemplateProps) {
+export default function Base() {
   return (
     <S.Wrapper>
       <Header />
       <S.Container>
-        {children}
+        <Outlet />
       </S.Container>
     </S.Wrapper>
   )

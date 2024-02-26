@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Checkout() {
+export default function CardDescription() {
   return (
     <div>
-      <h1> checkout</h1>
+
     </div>
   )
 }
